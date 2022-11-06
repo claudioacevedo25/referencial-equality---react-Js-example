@@ -6,6 +6,7 @@ export default function App() {
   const [name, setName] = React.useState('');
   const [dark, setDark] = React.useState(false);
 
+  // sino memorizamos el objeto, cada vez que cualquier estado cambie, va a renderizar todo el componente y al tener como dependencia person, useEffect va a volver a renderizarse
   const person = React.useMemo(() => {
     return { name, age };
   }, [name, age]);
